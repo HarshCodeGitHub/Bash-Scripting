@@ -1,0 +1,34 @@
+#  Digital Clock using Bash Scripting
+
+# Commands to create clock
+
+date -> will display : (Day) (Month) (Date) (Time) (IST) (Year)
+
+date +%T -> will only display Time: 03:28:04
+But we want this command to execute multiple times so that we can get the clock.
+
+Now date +%T; sleep 1; -> this will display time & will hold the terminal for 1s & then next terminal line will appear.
+
+Now time will appear like this:
+
+03:28:04
+03:28:05
+03:28:06
+
+Now we want to clear the previous time & then display the current time , again clear the terminal & again display , & continue this...
+
+-> clear; date+%T; sleep 1s; clear; date+%T; sleep 1s; clear; date+%T; sleep 1s;
+
+To do this we will run an Infinite loop & add all this commands
+
+while true
+do 
+	clear
+	echo $(date +%T)
+	sleep 1s
+done
+
+
+!! Our Clock is Ready. !!
+
+
